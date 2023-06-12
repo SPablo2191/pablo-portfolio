@@ -1,10 +1,12 @@
 from django.db import models
 from .user import User
+from .company import Company
 from datetime import datetime
 
 
 class Study(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+    company = models.ForeignKey(Company, on_delete=models.CASCADE)
     title = models.TextField(max_length=100)
     description = models.TextField(max_length=350)
     start_date = models.DateField(default=datetime.now)
