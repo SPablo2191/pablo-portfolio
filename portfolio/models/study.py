@@ -1,7 +1,7 @@
 from django.db import models
+from datetime import datetime
 from .user import User
 from .company import Company
-from datetime import datetime
 
 
 class Study(models.Model):
