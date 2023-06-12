@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib import admin
+from rest_framework import serializers
 
 
 class User(models.Model):
@@ -13,3 +14,9 @@ class User(models.Model):
 @admin.register(User)
 class UserAdmin(admin.ModelAdmin):
     list_display = ("username", "password")
+
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = "__all__"
