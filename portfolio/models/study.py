@@ -2,6 +2,7 @@ from django.db import models
 from datetime import datetime
 from .user import User
 from .company import Company
+from django.contrib import admin
 
 
 class Study(models.Model):
@@ -12,3 +13,16 @@ class Study(models.Model):
     start_date = models.DateField(default=datetime.now)
     end_date = models.DateField(default=None)
     image_url = models.CharField(max_length=255)
+
+
+@admin.register(Study)
+class StudyAdmin(admin.ModelAdmin):
+    list_display = (
+        "user",
+        "company",
+        "title",
+        "description",
+        "start_date",
+        "end_date",
+        "image_url",
+    )

@@ -1,5 +1,6 @@
 from django.db import models
 from .user import User
+from django.contrib import admin
 
 
 class Achievement(models.Model):
@@ -7,3 +8,8 @@ class Achievement(models.Model):
     title = models.TextField(max_length=100)
     description = models.TextField(max_length=255)
     image_url = models.CharField(max_length=300)
+
+
+@admin.register(Achievement)
+class AchievementAdmin(admin.ModelAdmin):
+    list_display = ("user", "title", "description", "image_url")

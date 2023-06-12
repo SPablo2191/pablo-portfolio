@@ -3,7 +3,7 @@ from datetime import datetime
 from .user import User
 from .role import Role
 from .company import Company
-
+from django.contrib import admin
 
 class WorkExperience(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -12,3 +12,13 @@ class WorkExperience(models.Model):
     description = models.TextField(max_length=400)
     start_date = models.DateField(default=datetime.now)
     end_date = models.DateField(default=None)
+
+@admin.register(WorkExperience)
+class WorkExperienceAdmin(admin.ModelAdmin):
+    list_display = (
+        "user",
+        "role",
+        "description",
+        "start_date",
+        "end_date",
+    )

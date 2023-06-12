@@ -1,6 +1,7 @@
 from django.db import models
 from .user import User
 from .technology import Technology
+from django.contrib import admin
 
 
 class Skill(models.Model):
@@ -13,3 +14,12 @@ class Skill(models.Model):
 class TechnologyExperience(models.Model):
     technology = models.ForeignKey(Technology, on_delete=models.CASCADE)
     skill = models.ForeignKey(Skill, on_delete=models.CASCADE)
+
+
+class TechnologyExperienceInline(admin.TabularInline):
+    model = TechnologyExperience
+
+
+@admin.register(Skill)
+class ProjectAdmin(admin.ModelAdmin):
+    inlines = [TechnologyExperienceInline]
