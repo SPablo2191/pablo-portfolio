@@ -1,6 +1,7 @@
 from django.db import models
 from .user import User
 from django.contrib import admin
+from rest_framework import serializers
 
 
 class Technology(models.Model):
@@ -12,3 +13,9 @@ class Technology(models.Model):
 @admin.register(Technology)
 class TechnologyAdmin(admin.ModelAdmin):
     list_display = ("user", "name", "image_url")
+
+
+class TechnologySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Technology
+        fields = "__all__"
