@@ -1,6 +1,7 @@
 from django.db import models
 from .user import User
 from django.contrib import admin
+from rest_framework import serializers
 
 
 class Fact(models.Model):
@@ -12,3 +13,9 @@ class Fact(models.Model):
 @admin.register(Fact)
 class FactAdmin(admin.ModelAdmin):
     list_display = ("user", "title", "description")
+
+
+class FactSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Fact
+        fields = "__all__"
