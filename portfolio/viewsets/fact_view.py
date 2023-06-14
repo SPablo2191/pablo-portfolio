@@ -1,5 +1,6 @@
 from rest_framework import viewsets
-from ..models.fact import Fact,FactSerializer
+from ..models.fact import Fact
+from ..serializers.fact_serializer import FactSerializer
 
 
 class FactViewSet(viewsets.ModelViewSet):
