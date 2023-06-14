@@ -10,6 +10,8 @@ class Skill(models.Model):
     description = models.TextField(max_length=400)
     name = models.TextField(max_length=100)
     technologies = models.ManyToManyField(Technology, through="TechnologyExperience")
+    def __str__(self) -> str:
+        return self.name+" "+self.description+" "+''.join([str(technology) for technology in self.technologies.all()])
 
 
 class TechnologyExperience(models.Model):
