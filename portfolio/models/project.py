@@ -1,6 +1,6 @@
 from django.db import models
 from .user import User
-from .technology import Technology,TechnologySerializer
+from .technology import Technology, TechnologySerializer
 from django.contrib import admin
 from rest_framework import serializers
 
@@ -10,6 +10,7 @@ class Project(models.Model):
     title = models.TextField(max_length=100)
     description = models.TextField(max_length=255)
     technologies = models.ManyToManyField(Technology, through="TechnologyProject")
+
     def __str__(self) -> str:
         return self.title
 
@@ -28,15 +29,9 @@ class ProjectAdmin(admin.ModelAdmin):
     inlines = [TechnologyProjectInline]
 
 
-class TechnologyProjectSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = TechnologyProject
-        fields = ["technology"]
-
-
 class ProjectSerializer(serializers.ModelSerializer):
     technologies = TechnologySerializer(many=True, read_only=True)
 
     class Meta:
         model = Project
-        fields = [ "title", "description", "technologies"]
+        fields = ["title", "description", "technologies"]
