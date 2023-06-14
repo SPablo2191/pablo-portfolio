@@ -1,8 +1,8 @@
 from django.db import models
 from .user import User
-from .technology import Technology, TechnologySerializer
+from .technology import Technology
 from django.contrib import admin
-from rest_framework import serializers
+
 
 
 class Project(models.Model):
@@ -29,9 +29,3 @@ class ProjectAdmin(admin.ModelAdmin):
     inlines = [TechnologyProjectInline]
 
 
-class ProjectSerializer(serializers.ModelSerializer):
-    technologies = TechnologySerializer(many=True, read_only=True)
-
-    class Meta:
-        model = Project
-        fields = ["title", "description", "technologies"]
