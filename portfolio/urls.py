@@ -5,11 +5,12 @@ from .viewsets.user_view import UserViewSet
 from .viewsets.company_view import CompanyViewSet
 from .viewsets.fact_view import FactViewSet
 from .viewsets.technology_view import TechnologyViewSet
-
+from .viewsets.project_view import ProjectViewSet
 route = routers.SimpleRouter()
 route.register("achievements", AchievementViewSet)
 route.register("users", UserViewSet)
 route.register("companies", CompanyViewSet)
 route.register("facts", FactViewSet)
 route.register("technologies", TechnologyViewSet)
+route.register("projects", ProjectViewSet)
 urlpatterns = route.urls

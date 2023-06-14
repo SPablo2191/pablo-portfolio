@@ -19,3 +19,4 @@ class FactSerializer(serializers.ModelSerializer):
     class Meta:
         model = Fact
         fields = "__all__"
+
