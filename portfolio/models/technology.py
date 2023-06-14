@@ -9,6 +9,9 @@ class Technology(models.Model):
     name = models.TextField(max_length=100)
     image_url = models.TextField(max_length=255)
 
+    def __str__(self) -> str:
+        return self.name
+
 
 @admin.register(Technology)
 class TechnologyAdmin(admin.ModelAdmin):
