@@ -1,5 +1,6 @@
 from rest_framework import viewsets
-from ..models.achievement import Achievement, AchievementSerializer
+from ..models.achievement import Achievement
+from ..serializers.achievement_serializer import AchievementSerializer
 
 
 class AchievementViewSet(viewsets.ModelViewSet):
