@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from ..models.skill import Skill
-from ..models.technology import TechnologySerializer
+from .technology_serializer import TechnologySerializer
 
 
 class SkillSerializer(serializers.ModelSerializer):

@@ -3,7 +3,6 @@ from datetime import datetime
 from .user import User
 from .company import Company
 from django.contrib import admin
-from rest_framework import serializers
 
 
 class Study(models.Model):
@@ -29,7 +28,4 @@ class StudyAdmin(admin.ModelAdmin):
     )
 
 
-class StudySerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Study
-        fields = "__all__"
+
