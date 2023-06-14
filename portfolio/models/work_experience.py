@@ -4,6 +4,8 @@ from .user import User
 from .role import Role
 from .company import Company
 from django.contrib import admin
+from rest_framework import serializers
+
 
 class WorkExperience(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -12,6 +14,7 @@ class WorkExperience(models.Model):
     description = models.TextField(max_length=400)
     start_date = models.DateField(default=datetime.now)
     end_date = models.DateField(default=None)
+
 
 @admin.register(WorkExperience)
 class WorkExperienceAdmin(admin.ModelAdmin):
@@ -22,3 +25,9 @@ class WorkExperienceAdmin(admin.ModelAdmin):
         "start_date",
         "end_date",
     )
+
+
+class WorkExperienceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = WorkExperience
+        fields = "__all__"
