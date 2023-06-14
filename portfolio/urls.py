@@ -8,6 +8,7 @@ from .viewsets.technology_view import TechnologyViewSet
 from .viewsets.project_view import ProjectViewSet
 from .viewsets.role_view import RoleViewSet
 from .viewsets.skill_view import SkillViewSet
+from .viewsets.study_view import StudyViewSet
 
 route = routers.SimpleRouter()
 route.register("achievements", AchievementViewSet)
@@ -18,4 +19,5 @@ route.register("technologies", TechnologyViewSet)
 route.register("projects", ProjectViewSet)
 route.register("roles", RoleViewSet)
 route.register("skills", SkillViewSet)
+route.register("studies", StudyViewSet)
 urlpatterns = route.urls
