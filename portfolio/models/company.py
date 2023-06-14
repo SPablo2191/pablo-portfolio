@@ -8,7 +8,8 @@ class Company(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.TextField(max_length=100)
     image_url = models.CharField(max_length=255)
-
+    def __str__(self) -> str:
+        return self.name
 
 @admin.register(Company)
 class CompanyAdmin(admin.ModelAdmin):
