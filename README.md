@@ -136,3 +136,24 @@ python manage.py runserver
 | GET    | projects/<int:id> | Recuperar un proyecto por su id |
 | DELETE    | projects/<int:id> | Eliminar un proyecto por su id |
 
+## Roles
+| Método | Path | Descripción |
+| ------ | -------- | ----------- |
+| POST    | roles | Registrar un nuevo rol |
+| GET   | roles | Recuperar el listado de roles |
+| PUT    | roles/<int:id> | Editar un rol  por su id |
+| PATCH    | roles/<int:id> | Editar un rol por su id (parcialmente) |
+| GET    | roles/<int:id> | Recuperar un rol por su id |
+| DELETE    | roles/<int:id> | Eliminar un rol por su id |
+
+## Habilidades:
+| Método | Path | Descripción |
+| ------ | -------- | ----------- |
+| POST    | skills | Registrar una nueva habilidad |
+| GET   | skills | Recuperar el listado de Habilidades |
+| PUT    | skills/<int:id> | Editar una habilidad por su id |
+| PATCH    | skills/<int:id> | Editar una habilidad por su id (parcialmente) |
+| GET    | skills/<int:id> | Recuperar una habilidad por su id |
+| DELETE    | skills/<int:id> | Eliminar una habilidad por su id |
+
+## Estudios
