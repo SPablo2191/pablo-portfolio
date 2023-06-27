@@ -165,3 +165,13 @@ python manage.py runserver
 | PATCH    | studies/<int:id> | Editar un estudio por su id (parcialmente) |
 | GET    | studies/<int:id> | Recuperar un estudio por su id |
 | DELETE    | studies/<int:id> | Eliminar un estudio por su id |
+
+## Trabajos
+| Método | Path | Descripción |
+| ------ | -------- | ----------- |
+| POST    | works | Registrar un nuevo trabajo |
+| GET   | works | Recuperar el listado de trabajos |
+| PUT    | works/<int:id> | Editar un trabajo  por su id |
+| PATCH    | works/<int:id> | Editar un trabajo por su id (parcialmente) |
+| GET    | works/<int:id> | Recuperar un trabajo por su id |
+| DELETE    | works/<int:id> | Eliminar un trabajo por su id |
