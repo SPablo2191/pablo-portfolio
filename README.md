@@ -86,6 +86,13 @@ python manage.py runserver
 - [Logros](#Logros)
 - [Empresas o Instituciones](#empresas-e-instituciones)
 - [Hechos](#hechos)
+- [Tecnologias](#tecnologias)
+- [Proyectos](#proyectos)
+- [Roles](#roles)
+- [Habilidades](#habilidades)
+- [Estudios](#estudios)
+- [Trabajos](#trabajos)
+
 ## Logros
 | Método | Path | Descripción |
 | ------ | -------- | ----------- |
@@ -116,7 +123,7 @@ python manage.py runserver
 | GET    | facts/<int:id> | Recuperar un hecho por su id |
 | DELETE    | facts/<int:id> | Eliminar un hecho por su id |
 
-## Technologias
+## Tecnologias
 | Método | Path | Descripción |
 | ------ | -------- | ----------- |
 | POST    | technologies | Registrar una nueva tecnologia |
