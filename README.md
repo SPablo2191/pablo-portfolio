@@ -83,3 +83,45 @@ python manage.py runserver
 6. ¡Listo! ya puede visitar la pagina web en este [enlace](http://127.0.0.1:8000/).
 
 ## Modulos 🚨
+- [Logros](#Logros)
+- [Empresas o Instituciones](#empresas-e-instituciones)
+- [Hechos](#hechos)
+## Logros
+| Método | Path | Descripción |
+| ------ | -------- | ----------- |
+| POST    | achievements | Registrar un nuevo logro |
+| GET   | achievements | Recuperar el listado de logros |
+| PUT    | achievements/<int:id> | Editar un logro por su id |
+| PATCH    | achievements/<int:id> | Editar un logro por su id (parcialmente) |
+| GET    | achievements/<int:id> | Recuperar un logro por su id |
+| DELETE    | achievements/<int:id> | Eliminar un logro |
+
+## Empresas e Instituciones
+| Método | Path | Descripción |
+| ------ | -------- | ----------- |
+| POST    | companies | Registrar una nueva empresa |
+| GET   | companies | Recuperar el listado de empresas |
+| PUT    | companies/<int:id> | Editar una empresa por su id |
+| PATCH    | companies/<int:id> | Editar una empresa por su id (parcialmente) |
+| GET    | companies/<int:id> | Recuperar una empresa por su id |
+| DELETE    | companies/<int:id> | Eliminar una empresa por su id |
+
+## Hechos
+| Método | Path | Descripción |
+| ------ | -------- | ----------- |
+| POST    | facts | Registrar un nuevo hecho |
+| GET   | facts | Recuperar el listado de hechos |
+| PUT    | facts/<int:id> | Editar un hecho a por su id |
+| PATCH    | facts/<int:id> | Editar un hecho por su id (parcialmente) |
+| GET    | facts/<int:id> | Recuperar un hecho por su id |
+| DELETE    | facts/<int:id> | Eliminar un hecho por su id |
+
+## Technologias
+| Método | Path | Descripción |
+| ------ | -------- | ----------- |
+| POST    | technologies | Registrar una nueva tecnologia |
+| GET   | technologies | Recuperar el listado de tecnologias |
+| PUT    | technologies/<int:id> | Editar una tecnologia por su id |
+| PATCH    | technologies/<int:id> | Editar una tecnologia por su id (parcialmente) |
+| GET    | technologies/<int:id> | Recuperar una tecnologia por su id |
+| DELETE    | technologies/<int:id> | Eliminar una tecnologia por su id |
