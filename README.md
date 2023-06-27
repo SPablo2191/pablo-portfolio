@@ -157,3 +157,11 @@ python manage.py runserver
 | DELETE    | skills/<int:id> | Eliminar una habilidad por su id |
 
 ## Estudios
+| Método | Path | Descripción |
+| ------ | -------- | ----------- |
+| POST    | studies | Registrar un nuevo estudio |
+| GET   | studies | Recuperar el listado de estudios |
+| PUT    | studies/<int:id> | Editar un estudio  por su id |
+| PATCH    | studies/<int:id> | Editar un estudio por su id (parcialmente) |
+| GET    | studies/<int:id> | Recuperar un estudio por su id |
+| DELETE    | studies/<int:id> | Eliminar un estudio por su id |
