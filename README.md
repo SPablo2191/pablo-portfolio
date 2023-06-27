@@ -125,3 +125,14 @@ python manage.py runserver
 | PATCH    | technologies/<int:id> | Editar una tecnologia por su id (parcialmente) |
 | GET    | technologies/<int:id> | Recuperar una tecnologia por su id |
 | DELETE    | technologies/<int:id> | Eliminar una tecnologia por su id |
+
+## Proyectos
+| Método | Path | Descripción |
+| ------ | -------- | ----------- |
+| POST    | projects | Registrar un nuevo proyecto |
+| GET   | projects | Recuperar el listado de proyectos |
+| PUT    | projects/<int:id> | Editar un proyecto  por su id |
+| PATCH    | projects/<int:id> | Editar un proyecto por su id (parcialmente) |
+| GET    | projects/<int:id> | Recuperar un proyecto por su id |
+| DELETE    | projects/<int:id> | Eliminar un proyecto por su id |
+
