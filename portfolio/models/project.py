@@ -9,6 +9,7 @@ class Project(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.TextField(max_length=100)
     description = models.TextField(max_length=255)
+    project_url = models.TextField(max_length=255,default="")
     technologies = models.ManyToManyField(Technology, through="TechnologyProject")
 
     def __str__(self) -> str:
