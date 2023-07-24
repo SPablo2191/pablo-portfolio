@@ -29,7 +29,8 @@ SECRET_KEY = 'django-insecure-*g0v&5s6#q6h-gqhundjf$)72xp+nf2ej1*^iyl7&cb&azu2=u
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'pablo-portfolio-api.onrender.com'
+    'pablo-portfolio-api.onrender.com',
+    'localhost'
 ]
 
 
