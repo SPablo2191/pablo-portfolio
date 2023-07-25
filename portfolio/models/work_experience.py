@@ -27,7 +27,4 @@ class WorkExperienceAdmin(admin.ModelAdmin):
     )
 
 
-class WorkExperienceSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = WorkExperience
-        fields = "__all__"
+
