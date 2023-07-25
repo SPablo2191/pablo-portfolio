@@ -5,4 +5,4 @@ from ..models.work_experience import WorkExperience
 class WorkExperienceSerializer(serializers.ModelSerializer):
     class Meta:
         model = WorkExperience
-        fields = "__all__"
+        fields = ["role", "company", "description","start_date","end_date"]
