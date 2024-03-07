@@ -13,7 +13,7 @@ class WorkExperience(models.Model):
     company = models.ForeignKey(Company, on_delete=models.CASCADE)
     description = models.TextField(max_length=400)
     start_date = models.DateField(default=datetime.now)
-    end_date = models.DateField(default=None)
+    end_date = models.DateField(default=None, blank=True,null=True)
 
 
 @admin.register(WorkExperience)
@@ -25,6 +25,3 @@ class WorkExperienceAdmin(admin.ModelAdmin):
         "start_date",
         "end_date",
     )
-
-
-
