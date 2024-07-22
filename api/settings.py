@@ -61,7 +61,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000',
+    # 'http://localhost:3000',
     'https://pablo-sandoval-portfolio.vercel.app',
     'http://100.97.161.92:3000'
 ]
