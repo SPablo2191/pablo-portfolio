@@ -62,7 +62,8 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
-    'https://pablo-sandoval-portfolio.vercel.app'
+    'https://pablo-sandoval-portfolio.vercel.app',
+    'pablo-desktop.tail03553c.ts.net'
 ]
 
 ROOT_URLCONF = 'api.urls'
